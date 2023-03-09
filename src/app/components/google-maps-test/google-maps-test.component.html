@@ -1,0 +1,22 @@
+<ng-template [ngIf]="(apiLoaded$ | async)">
+
+  <!-- HELLLLOOOO -->
+  <!-- (mapClick)="listingList$ ? false :handleMapClick($event)" -->
+  <google-map #googleMap [width]="width"
+              [height]="height"
+              [options]="options!"
+              scrollWheel="null"
+              (mapClick)="click($event)">
+    <!-- <ng-template *ngIf="markers"> -->
+      <map-marker
+        *ngFor="let marker of markers"
+        [position]="marker.position"
+        [label]="marker.label"
+        [title]="marker.title"
+        [options]="marker.options"
+      >
+      </map-marker>
+    <!-- </ng-template> -->
+
+  </google-map>
+</ng-template>
