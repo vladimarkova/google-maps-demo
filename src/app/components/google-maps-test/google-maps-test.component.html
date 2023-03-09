@@ -10,10 +10,8 @@
     <!-- <ng-template *ngIf="markers"> -->
       <map-marker
         *ngFor="let marker of markers"
-        [position]="marker.position"
-        [label]="marker.label"
-        [title]="marker.title"
-        [options]="marker.options"
+        [position]="marker?.position!"
+        [title]="marker.title || 'Default title'"
       >
       </map-marker>
     <!-- </ng-template> -->

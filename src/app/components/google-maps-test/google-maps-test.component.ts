@@ -28,7 +28,8 @@ export class GoogleMapsTestComponent implements OnInit {
 
   markersFitBoundsPadding: number = 200;
 
-  markers: any[] = [];
+  markers: google.maps.marker.AdvancedMarkerView[] = [];
+  // google.maps.marker.AdvancedMarkerView[]
 
   selectedMarker!: null;
 
@@ -47,17 +48,16 @@ export class GoogleMapsTestComponent implements OnInit {
   }
 
   addMarker() {
+    // const pinViewScaled = new google.maps.marker.PinView({
+    //   scale: 1.5,
+    // });
     this.markers.push({
-      position: {
-        lat: this.lat,
-        lng: this.lng,
+      position: { lat: this.lat || 43.204666, lng: this.lng || 27.910543 },
+      title: 'Marker title',
+      // content: pinViewScaled.element,
+      addListener(eventName, handler) {
+        return handler(eventName);
       },
-      // label: {
-      //   color: 'red',
-      //   text: 'Marker label ' + (this.markers.length + 1),
-      // },
-      title: 'Marker title ' + (this.markers.length + 1),
-      options: { animation: google.maps.Animation.DROP },
     });
   }
 
