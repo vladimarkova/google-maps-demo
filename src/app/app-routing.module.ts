@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { GoogleMapsBasicComponent } from './components/google-maps-basic/google-maps-basic.component';
 import { GoogleMapsTestComponent } from './components/google-maps-test/google-maps-test.component';
 
 const routes: Routes = [
@@ -9,8 +10,8 @@ const routes: Routes = [
   //   redirectTo: '/'
   // },
   {
-    path:'google-maps-test',
-    component: GoogleMapsTestComponent
+    path:'google-maps-basic',
+    component: GoogleMapsBasicComponent
   },
 ];
 

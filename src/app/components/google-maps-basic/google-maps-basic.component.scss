@@ -1,11 +1,22 @@
-// .price-tag {
-//   width: 50px;
-//   border-radius: 5px;
-//   background-color: rgb(26, 17, 159);
-//   color: #fff;
-//   padding: 10px;
-// }
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+ #map {
+  height: 500px;
+}
 
+/*
+ * Optional: Makes the sample page fill the window.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML marker styles */
 .price-tag {
   background-color: #4285F4;
   border-radius: 8px;

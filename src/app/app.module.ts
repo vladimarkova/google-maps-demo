@@ -6,11 +6,13 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoogleMapsTestComponent } from './components/google-maps-test/google-maps-test.component';
+import { GoogleMapsBasicComponent } from './components/google-maps-basic/google-maps-basic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoogleMapsTestComponent
+    GoogleMapsTestComponent,
+    GoogleMapsBasicComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,9 @@ import { GoogleMapsTestComponent } from './components/google-maps-test/google-ma
     HttpClientModule,
     HttpClientJsonpModule,
   ],
-  providers: [],
+  providers: [
+    { provide: Window, useValue: window }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
