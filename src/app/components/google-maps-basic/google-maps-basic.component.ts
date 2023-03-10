@@ -12,6 +12,7 @@ export class GoogleMapsBasicComponent implements OnInit {
   constructor(private _renderer2: Renderer2, @Inject(DOCUMENT) private _document: Document) { }
 
   ngOnInit() {
+    // priceTag.className = "price-tag";
     let script = this._renderer2.createElement('script');
     script.type = `text/javascript`;
     script.text = `
@@ -22,8 +23,12 @@ export class GoogleMapsBasicComponent implements OnInit {
         mapId: "4504f8b37365c3d0",
       });
       const priceTag = document.createElement("div");
+      priceTag.style.color="#fff";
+      priceTag.style.padding = "10px";
+      priceTag.style.background = "#0d0f93";
+      priceTag.style.borderRadius = "5px";
+      priceTag.style.opacity = "0.85";
 
-      priceTag.className = "price-tag";
       priceTag.textContent = "$2.5M";
 
       const markerView = new google.maps.marker.AdvancedMarkerView({

@@ -18,12 +18,13 @@ body {
 
 /* HTML marker styles */
 .price-tag {
-  background-color: #4285F4;
   border-radius: 8px;
   color: #FFFFFF;
   font-size: 14px;
   padding: 10px 15px;
   position: relative;
+  background-color: #0d0f93;
+  color: #fff;
 }
 
 .price-tag::after {
